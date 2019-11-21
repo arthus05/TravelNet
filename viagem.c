@@ -3,7 +3,6 @@
 #include "viagem.h"
 
 struct viagem {
-  int dia, mes, ano;
+  int dia, mes, ano, permanencia;
   char* destino;
-  char* permanencia;
 };
