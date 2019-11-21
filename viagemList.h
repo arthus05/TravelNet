@@ -1,5 +1,4 @@
 #include "viagem.h"
-#include "usuario.h"
 
 /* TAD lista de viagens */
 typedef struct viagemList ViagemList;
@@ -15,6 +14,3 @@ void rmV(ViagemList* listV, Viagem* viagem);
 
 /* Altera um agendamento de viagem */
 void altV(ViagemList* listV, Viagem* antes, Viagem* depois);
-
-/* Permissão de acesso, retorna '1' para permitido, e '0' para negado */
-int accV()
