@@ -1,4 +1,5 @@
 #include "viagem.h"
+#include "usuario.h"
 
 /* TAD lista de viagens */
 typedef struct viagemList ViagemList;
