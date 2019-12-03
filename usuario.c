@@ -5,19 +5,31 @@
 #include "viagemList.h"
 
 struct usuario {
-  int* id, qtdA;
+  int id, qtdA;
   char* nome;
   Usuario** listAmigos;
   ViagemList* listViagens;
 };
 
-Usuario* criaUser(char* nome, int* id) {
+Usuario* criaUser(char* nome, int id) {
   Usuario* usuario = (Usuario*) malloc(sizeof(Usuario));
   Usuario** listAmigos;
   usuario->listViagens = criaListV();
   usuario->qtdA = 0;
   usuario->id = id;
   usuario->nome = nome;
+}
+
+int qtdA(Usuario* usuario) {
+  return usuario->qtdA;
+}
+
+char* obterNome(Usuario* usuario) {
+  return usuario->nome;
+}
+
+int obterID(Usuario* usuario) {
+  return usuario->id;
 }
 
 void addAmigo(Usuario* user1, Usuario* user2) {
@@ -42,16 +54,16 @@ void rmAmigo(Usuario* user1, Usuario* user2) {
   user2->listAmigos = (Usuario**) realloc(user2->listAmigos, user2->qtdA*sizeof(Usuario*));
 }
 
-Usuario** mostrarListAmigos(Usuario* usuario) {
+Usuario** obterListAmigos(Usuario* usuario) {
   return usuario->listAmigos;
 }
 
-ViagemList* mostrarViagemList(Usuario* usuario) {
+ViagemList* obterViagemList(Usuario* usuario) {
   return usuario->listViagens;
 }
 
 int accV(Usuario* usuario1, Usuario* usuario2) {
-  j = 0
+  int j = 0;
   while (usuario1->listAmigos[j] != NULL) {
     if (usuario1->listAmigos[j] = usuario2) {
       return 1;
